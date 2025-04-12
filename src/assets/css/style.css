@@ -1,0 +1,15 @@
+/* Custom styles for your podcast website */
+
+/* Persistent player styles */
+.persistent-player {
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Episode card hover effect */
+  .episode-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Additional custom styles go here */
