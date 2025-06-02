@@ -3,7 +3,6 @@ layout: layouts/base.njk
 title: Contact | Solving for Zero
 ---
 
-{% block content %}
 <section class="py-12 bg-white">
   <div class="container mx-auto px-4">
     <div class="max-w-4xl mx-auto">
@@ -46,4 +45,3 @@ title: Contact | Solving for Zero
     </div>
   </div>
 </section>
-{% endblock %}
