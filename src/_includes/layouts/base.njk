@@ -7,6 +7,7 @@
   <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/player.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
   <!-- Navigation -->
@@ -41,6 +42,7 @@
   <!-- Main Content -->
   <main class="flex-grow">
     {% block content %}
+      {{ content | safe }}
     {% endblock %}
   </main>
 
@@ -95,5 +97,11 @@
 
   <!-- JavaScript -->
   <script src="/assets/js/site.js"></script>
+
+<!-- Add this before the closing body tag -->
+<div class="sticky-player">
+  {% include "components/player.njk" %}
+</div>
+
 </body>
 </html>

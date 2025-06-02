@@ -12,7 +12,9 @@
   "description": "",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "nunjucks": "^3.2.4"
+    "node-fetch": "^2.7.0",
+    "nunjucks": "^3.2.4",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

@@ -2,14 +2,185 @@
 
 /* Persistent player styles */
 .persistent-player {
-    background: rgba(0,0,0,0.9);
-    backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.9);
+  backdrop-filter: blur(10px);
+}
+
+/* Episode card hover effect */
+.episode-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Podcast Player Styles */
+.sticky-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.podcast-player {
+  padding: 12px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.player-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-info {
+  flex: 1;
+}
+
+.now-playing {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.episode-title {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 2;
+}
+
+.play-button {
+  background: #0C8671;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.progress-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.progress-bar {
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #0C8671;
+  width: 0%;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .player-container {
+    flex-direction: column;
+    gap: 10px;
   }
   
-  /* Episode card hover effect */
-  .episode-card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
+  .player-controls {
+    width: 100%;
   }
   
-  /* Additional custom styles go here */
+  .episode-title {
+    max-width: 100%;
+  }
+}
+
+/* Episodes Page Styles */
+.episodes-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.episode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.episode-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: white;
+}
+
+.episode-info {
+  padding: 24px;
+}
+
+.episode-info h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.episode-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.episode-description {
+  margin-bottom: 20px;
+}
+
+.episode-play-btn {
+  background: #0C8671;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.episode-link {
+  display: inline-block;
+  margin-left: 12px;
+  color: #0C8671;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.episode-link:hover {
+  text-decoration: underline;
+}
+
+.sample-episode {
+  margin-top: 30px;
+}
