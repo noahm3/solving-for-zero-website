@@ -46,7 +46,7 @@
       
 <!-- Make podcast data available to JavaScript -->
 <script>
-  window.podcastData = {"title":"Solving for Zero","description":"When you think of climate change, it probably feels like a daunting topic. We’re constantly hearing about all the reasons to be worried, but what about the progress we’re making?\n\nJoin your host, Noah Megregian, as he brings in leaders of climate tech organizations to discuss the stories behind the solutions. From the technology that's making headlines to the business models that are changing the game, they'll explore it all.\n\nWhether you're looking for more meaning in your work, or simply passionate about creating a better future, this podcast is for you.\n\nTune in every other Thursday!","link":"https://podcasters.spotify.com/pod/show/noahmegregian","image":"https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/42523448/42523448-1735934139185-ef72adf2f9003.jpg","episodes":[{"id":0,"title":"Welome to Solving for Zero","description":"<p>Podcast Trailer</p>\n","pubDate":"Fri, 03 Jan 2025 19:58:44 GMT","audioUrl":"https://anchor.fm/s/fe0e3860/podcast/play/96565680/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-0-3%2F960566da-ae3d-2c24-2567-fbb2a5793c3d.mp3","duration":"00:01:37","episodeNumber":"","episodeType":"trailer","guid":"d0c7f319-113e-48b7-985a-1128aef687c7","link":"https://podcasters.spotify.com/pod/show/noahmegregian/episodes/Welome-to-Solving-for-Zero-e2t1evg","formattedDate":"January 3, 2025"}]};
+  window.podcastData = {"title":"Solving for Zero","description":"When you think of climate change, it probably feels like a daunting topic. We’re constantly hearing about all the reasons to be worried, but what about the progress we’re making?\n\nJoin your host, Noah Megregian, as he brings in leaders of climate tech organizations to discuss the stories behind the solutions. From the technology that's making headlines to the business models that are changing the game, they'll explore it all.\n\nWhether you're looking for more meaning in your work, or simply passionate about creating a better future, this podcast is for you.\n\nTune in every other Thursday!","link":"https://podcasters.spotify.com/pod/show/noahmegregian","image":"https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/42523448/42523448-1735934139185-ef72adf2f9003.jpg","episodes":[{"id":0,"title":"Welome to Solving for Zero","description":"<p>Podcast Trailer</p>\n","pubDate":"Fri, 03 Jan 2025 19:58:44 GMT","audioUrl":"https://anchor.fm/s/fe0e3860/podcast/play/96565680/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-0-3%2F960566da-ae3d-2c24-2567-fbb2a5793c3d.mp3","duration":"00:01:37","episodeNumber":"","episodeType":"trailer","guid":"d0c7f319-113e-48b7-985a-1128aef687c7","link":"https://podcasters.spotify.com/pod/show/noahmegregian/episodes/Welome-to-Solving-for-Zero-e2t1evg","image":"https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/42523448/42523448-1735934139185-ef72adf2f9003.jpg","formattedDate":"January 3, 2025"}]};
 </script>
 
 
@@ -66,11 +66,31 @@ Tune in every other Thursday!</p>
         <div class="mb-4">
           <h2 class="text-xl font-medium mb-2">Listen to the Trailer</h2>
           
-          <!-- Interactive Trailer Player -->
+          <!-- Interactive Trailer Player with Artwork -->
           <div class="bg-gray-800 rounded-lg p-6 mb-4">
             
-            <h3 class="text-lg font-semibold mb-2">Welome to Solving for Zero</h3>
-            <p class="text-gray-300 mb-4">Podcast Trailer</p>
+            
+            <!-- Episode Artwork -->
+            <div class="flex items-center gap-4 mb-4">
+              <div class="flex-shrink-0">
+                <img src="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/42523448/42523448-1735934139185-ef72adf2f9003.jpg" 
+                     alt="Welome to Solving for Zero" 
+                     class="w-20 h-20 rounded-lg object-cover bg-gray-700"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <!-- Fallback if image fails -->
+                <div class="w-20 h-20 rounded-lg bg-gradient-to-br from-green-400 to-green-600 items-center justify-center hidden">
+                  <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v6.114a4 4 0 10.996 7.886 1 1 0 10.004-2C7.7 16.926 8 16.482 8 16V7.82l8-1.6v5.894a4 4 0 101 2V3z"/>
+                  </svg>
+                </div>
+              </div>
+              
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold mb-1 text-white">Welome to Solving for Zero</h3>
+                <p class="text-gray-300 text-sm mb-3">Podcast Trailer</p>
+              </div>
+            </div>
+            
             <button id="play-trailer-btn" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 mx-auto">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M8 5v10l8-5z"/>
