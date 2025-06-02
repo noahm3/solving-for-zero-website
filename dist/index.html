@@ -44,25 +44,44 @@
   <main class="flex-grow">
     
       
+<!-- Make podcast data available to JavaScript -->
+<script>
+  window.podcastData = {"title":"Solving for Zero","description":"When you think of climate change, it probably feels like a daunting topic. We’re constantly hearing about all the reasons to be worried, but what about the progress we’re making?\n\nJoin your host, Noah Megregian, as he brings in leaders of climate tech organizations to discuss the stories behind the solutions. From the technology that's making headlines to the business models that are changing the game, they'll explore it all.\n\nWhether you're looking for more meaning in your work, or simply passionate about creating a better future, this podcast is for you.\n\nTune in every other Thursday!","link":"https://podcasters.spotify.com/pod/show/noahmegregian","image":"https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/42523448/42523448-1735934139185-ef72adf2f9003.jpg","episodes":[{"id":0,"title":"Welome to Solving for Zero","description":"<p>Podcast Trailer</p>\n","pubDate":"Fri, 03 Jan 2025 19:58:44 GMT","audioUrl":"https://anchor.fm/s/fe0e3860/podcast/play/96565680/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-0-3%2F960566da-ae3d-2c24-2567-fbb2a5793c3d.mp3","duration":"00:01:37","episodeNumber":"","episodeType":"trailer","guid":"d0c7f319-113e-48b7-985a-1128aef687c7","link":"https://podcasters.spotify.com/pod/show/noahmegregian/episodes/Welome-to-Solving-for-Zero-e2t1evg","formattedDate":"January 3, 2025"}]};
+</script>
+
 
 <!-- Hero Section -->
 <section class="bg-black text-white relative py-16">
   <div class="container mx-auto px-4">
     <div class="max-w-3xl mx-auto text-center">
       <h1 class="text-4xl md:text-5xl font-bold mb-6">Solving for Zero</h1>
-      <p class="text-xl md:text-2xl mb-8">Every industry on earth is being reimagined to solve climate change, and most people haven&#39;t even noticed.</p>
+      <p class="text-xl md:text-2xl mb-8">When you think of climate change, it probably feels like a daunting topic. We’re constantly hearing about all the reasons to be worried, but what about the progress we’re making?
+
+Join your host, Noah Megregian, as he brings in leaders of climate tech organizations to discuss the stories behind the solutions. From the technology that&#39;s making headlines to the business models that are changing the game, they&#39;ll explore it all.
+
+Whether you&#39;re looking for more meaning in your work, or simply passionate about creating a better future, this podcast is for you.
+
+Tune in every other Thursday!</p>
       <div class="bg-black bg-opacity-70 p-6 rounded-lg">
         <div class="mb-4">
           <h2 class="text-xl font-medium mb-2">Listen to the Trailer</h2>
-          <!-- Replace with your actual Spotify embed code -->
-          <div class="aspect-w-16 aspect-h-9">
-            <iframe src="https://open.spotify.com/embed/episode/YOUR_TRAILER_ID" 
-                    width="100%" height="152" frameborder="0" allowtransparency="true" 
-                    allow="encrypted-media"></iframe>
+          
+          <!-- Interactive Trailer Player -->
+          <div class="bg-gray-800 rounded-lg p-6 mb-4">
+            
+            <h3 class="text-lg font-semibold mb-2">Welome to Solving for Zero</h3>
+            <p class="text-gray-300 mb-4">Podcast Trailer</p>
+            <button id="play-trailer-btn" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 mx-auto">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M8 5v10l8-5z"/>
+              </svg>
+              Play Trailer
+            </button>
           </div>
+          
         </div>
         <div class="flex flex-wrap justify-center gap-4 mt-6">
-          <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
+          <a href="https://open.spotify.com/show/YOUR_SHOW_ID" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
             Spotify
           </a>
           <a href="#" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg">
@@ -85,23 +104,11 @@
       <a href="/episodes" class="text-green-600 hover:text-green-800 font-medium">View all episodes →</a>
     </div>
     
+    
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Will be replaced with actual episodes later -->
-      <div class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md">
-        <div class="w-full h-48 bg-gray-200"></div>
-        <div class="p-6">
-          <span class="inline-block px-3 py-1 text-sm font-semibold bg-green-100 text-green-800 rounded-full mb-4">Episode 1</span>
-          <h3 class="text-xl font-bold mb-2">The Future of Sustainable Energy</h3>
-          <p class="text-gray-600 mb-4">We explore how energy systems are being reimagined with Dr. Jane Smith, leading researcher in renewable energy.</p>
-          <div class="flex justify-between items-center">
-            <span class="text-sm text-gray-500">32 minutes</span>
-            <a href="/episodes/episode-1" class="text-green-600 hover:text-green-800 font-medium flex items-center">
-              Listen
-            </a>
-          </div>
-        </div>
-      </div>
+      
     </div>
+    
   </div>
 </section>
 
@@ -179,28 +186,12 @@
 
 <!-- Add this before the closing body tag -->
 <div class="sticky-player">
-  <div class="podcast-player">
-  <div class="player-container">
-    <div class="player-info">
-      <div class="now-playing">Now Playing:</div>
-      <div class="episode-title" id="player-episode-title">Select an episode to play</div>
+  <div id="audio-player">
+  <!-- Player will be populated by JavaScript -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg z-50">
+    <div class="container mx-auto text-center text-gray-500">
+      <p class="text-sm">Select an episode to play</p>
     </div>
-    <div class="player-controls">
-      <button id="play-btn" class="play-button" aria-label="Play or pause">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-          <path d="M8 5v14l11-7z" fill="currentColor"/>
-        </svg>
-      </button>
-      <div class="progress-container">
-        <div class="progress-bar">
-          <div class="progress" id="progress"></div>
-        </div>
-        <div class="time-display">
-          <span id="current-time">0:00</span> / <span id="duration">0:00</span>
-        </div>
-      </div>
-    </div>
-    <audio id="audio-player" preload="none"></audio>
   </div>
 </div>
 </div>
